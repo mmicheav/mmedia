@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">{{ news.title }}</h2>
+                        <p class="card-text">{{ news.content }}</p>
+                        <small class="text-muted">Por: <b>{{ news.username }}</b> - {{ news.created_at}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
