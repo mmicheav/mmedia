@@ -1,12 +1,12 @@
 {% extends 'base.twig' %}
 
-{% block title %}Crear Noticia{% endblock %}
+{% block title %}Crear Articulo{% endblock %}
 
 {% block content %}
 
 <div class="container mt-5">
-    <h2>Crear Nota</h2>
-    <form action="/notes/save" method="post">
+    <h2>Crear Articulo</h2>
+    <form action="/articles/save" method="post">
         <div class="mb-3">
             <label for="title" class="form-label">Título</label>
             <input type="text" class="form-control" id="title" name="title" required>
@@ -15,7 +15,7 @@
             <label for="content" class="form-label">Contenido</label>
             <textarea class="form-control" id="content" name="content" rows="6" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Grabar Nota</button>
+        <button type="submit" class="btn btn-primary">Grabar Articulo</button>
     </form>
 </div>
 

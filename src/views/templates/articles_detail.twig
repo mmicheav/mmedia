@@ -1,6 +1,6 @@
 {% extends 'base.twig' %}
 
-{% block title %}{{ notes.title }}{% endblock %}
+{% block title %}{{ articles.title }}{% endblock %}
 
 {% block content %}
     <div class="container mt-4">
@@ -8,9 +8,9 @@
             <div class="col-md-8">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h2 class="card-title text-center">{{ notes.title }}</h2>
-                        <p class="card-text">{{ notes.content }}</p>
-                        <small class="text-muted">Por: <b>{{ notes.username }}</b> - {{ notes.created_at}}</small>
+                        <h2 class="card-title text-center">{{ articles.title }}</h2>
+                        <p class="card-text">{{ articles.content }}</p>
+                        <small class="text-muted">Por: <b>{{ articles.username }}</b> - {{ articles.created_at}}</small>
                     </div>
                 </div>
             </div>

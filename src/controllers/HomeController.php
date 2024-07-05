@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Helpers\SessionHelper;
 use App\Models\News;
-use App\Models\Notes;
+use App\Models\Articles;
 use Twig\Environment;
 
 class HomeController
@@ -20,8 +20,8 @@ class HomeController
     {        
         $newsModel = new News();
         $news = $newsModel->getAllTitles();
-        $notesModel = new Notes();
-        $notes = $notesModel->getAllTitles();
-        echo $this->twig->render('index.twig', ['news'=> $news, 'notes' => $notes,'isLoggedIn' => SessionHelper::isLoggedIn()]);
+        $articlesModel = new Articles();
+        $articles = $articlesModel->getAllTitles();
+        echo $this->twig->render('index.twig', ['news'=> $news, 'articles' => $articles,'isLoggedIn' => SessionHelper::isLoggedIn()]);
     }
 }

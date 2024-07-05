@@ -49,32 +49,32 @@ INSERT INTO `news` VALUES (1,'Bus estuvo a punto de caer al mar en Puerto Montt:
 UNLOCK TABLES;
 
 --
--- Table structure for table `notes`
+-- Table structure for table `articles`
 --
 
-DROP TABLE IF EXISTS `notes`;
+DROP TABLE IF EXISTS `articles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `notes` (
+CREATE TABLE `articles` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
   `content` text NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `creator_id` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `user_notes_fk_idx` (`creator_id`),
-  CONSTRAINT `user_notes_fk` FOREIGN KEY (`creator_id`) REFERENCES `users` (`id`)
+  KEY `user_articles_fk_idx` (`creator_id`),
+  CONSTRAINT `user_articles_fk` FOREIGN KEY (`creator_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `notes`
+-- Dumping data for table `articles`
 --
 
-LOCK TABLES `notes` WRITE;
-/*!40000 ALTER TABLE `notes` DISABLE KEYS */;
-INSERT INTO `notes` VALUES (1,'Lanzamiento de la Nueva Plataforma Web de Educación en Línea','En un esfuerzo por transformar la educación y hacerla accesible para todos, se ha lanzado una innovadora plataforma web de educación en línea. Esta plataforma, diseñada con tecnología de última generación, ofrece una amplia gama de cursos en diversas disciplinas, desde ciencias y tecnología hasta arte y humanidades.\n\nCon un enfoque en la flexibilidad y la calidad, la plataforma permite a los estudiantes aprender a su propio ritmo, en cualquier momento y desde cualquier lugar. Los cursos están diseñados por expertos en la materia y ofrecen recursos interactivos, como videos, cuestionarios y foros de discusión, para enriquecer la experiencia de aprendizaje.\n\n\"Estamos emocionados de presentar esta nueva herramienta educativa que tiene el potencial de cambiar la forma en que las personas acceden a la educación\", dijo el CEO de la empresa. \"Nuestro objetivo es proporcionar una educación de alta calidad que sea accesible para todos, sin importar su ubicación geográfica o situación económica\".\n\nLa plataforma también incluye características para apoyar a los educadores, como herramientas de seguimiento del progreso de los estudiantes y opciones para personalizar el contenido del curso. Con esta iniciativa, se espera llegar a miles de estudiantes en todo el mundo y ofrecerles las habilidades y el conocimiento que necesitan para tener éxito en sus carreras y en la vida.\n\nPara más información, visite el sitio web oficial de la plataforma.','2024-07-05 04:25:46',1),(4,'Avances en la Investigación de Energía Renovable','En un esfuerzo por abordar los desafíos del cambio climático y la sostenibilidad energética, se han logrado avances significativos en la investigación de energía renovable. Un equipo de científicos ha desarrollado una nueva tecnología que promete revolucionar la captura y almacenamiento de energía solar de manera más eficiente y económica que nunca antes.\r\n\r\nEsta innovadora tecnología utiliza materiales avanzados y técnicas de captura optimizadas para maximizar la conversión de la luz solar en energía utilizable. Los primeros resultados de los ensayos han demostrado un aumento significativo en la eficiencia energética, lo que podría tener un impacto positivo en la reducción de las emisiones de carbono y en la transición hacia una economía más limpia y sostenible.\r\n\r\n\"Estamos entusiasmados con el potencial de esta tecnología para transformar el panorama energético global\", dijo el líder del equipo de investigación. \"Nuestro objetivo es llevar esta tecnología al mercado lo antes posible para que pueda beneficiar a comunidades y empresas en todo el mundo\".\r\n\r\nAdemás de la captura de energía solar, el equipo está explorando nuevas fronteras en la energía eólica y la bioenergía, buscando soluciones innovadoras que puedan complementar y diversificar las fuentes de energía renovable disponibles.\r\n\r\nPara más detalles sobre estos avances y su impacto potencial, se invita a visitar el sitio web oficial del proyecto.','2024-07-05 05:20:15',1);
-/*!40000 ALTER TABLE `notes` ENABLE KEYS */;
+LOCK TABLES `articles` WRITE;
+/*!40000 ALTER TABLE `articles` DISABLE KEYS */;
+INSERT INTO `articles` VALUES (1,'Lanzamiento de la Nueva Plataforma Web de Educación en Línea','En un esfuerzo por transformar la educación y hacerla accesible para todos, se ha lanzado una innovadora plataforma web de educación en línea. Esta plataforma, diseñada con tecnología de última generación, ofrece una amplia gama de cursos en diversas disciplinas, desde ciencias y tecnología hasta arte y humanidades.\n\nCon un enfoque en la flexibilidad y la calidad, la plataforma permite a los estudiantes aprender a su propio ritmo, en cualquier momento y desde cualquier lugar. Los cursos están diseñados por expertos en la materia y ofrecen recursos interactivos, como videos, cuestionarios y foros de discusión, para enriquecer la experiencia de aprendizaje.\n\n\"Estamos emocionados de presentar esta nueva herramienta educativa que tiene el potencial de cambiar la forma en que las personas acceden a la educación\", dijo el CEO de la empresa. \"Nuestro objetivo es proporcionar una educación de alta calidad que sea accesible para todos, sin importar su ubicación geográfica o situación económica\".\n\nLa plataforma también incluye características para apoyar a los educadores, como herramientas de seguimiento del progreso de los estudiantes y opciones para personalizar el contenido del curso. Con esta iniciativa, se espera llegar a miles de estudiantes en todo el mundo y ofrecerles las habilidades y el conocimiento que necesitan para tener éxito en sus carreras y en la vida.\n\nPara más información, visite el sitio web oficial de la plataforma.','2024-07-05 04:25:46',1),(4,'Avances en la Investigación de Energía Renovable','En un esfuerzo por abordar los desafíos del cambio climático y la sostenibilidad energética, se han logrado avances significativos en la investigación de energía renovable. Un equipo de científicos ha desarrollado una nueva tecnología que promete revolucionar la captura y almacenamiento de energía solar de manera más eficiente y económica que nunca antes.\r\n\r\nEsta innovadora tecnología utiliza materiales avanzados y técnicas de captura optimizadas para maximizar la conversión de la luz solar en energía utilizable. Los primeros resultados de los ensayos han demostrado un aumento significativo en la eficiencia energética, lo que podría tener un impacto positivo en la reducción de las emisiones de carbono y en la transición hacia una economía más limpia y sostenible.\r\n\r\n\"Estamos entusiasmados con el potencial de esta tecnología para transformar el panorama energético global\", dijo el líder del equipo de investigación. \"Nuestro objetivo es llevar esta tecnología al mercado lo antes posible para que pueda beneficiar a comunidades y empresas en todo el mundo\".\r\n\r\nAdemás de la captura de energía solar, el equipo está explorando nuevas fronteras en la energía eólica y la bioenergía, buscando soluciones innovadoras que puedan complementar y diversificar las fuentes de energía renovable disponibles.\r\n\r\nPara más detalles sobre estos avances y su impacto potencial, se invita a visitar el sitio web oficial del proyecto.','2024-07-05 05:20:15',1);
+/*!40000 ALTER TABLE `articles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

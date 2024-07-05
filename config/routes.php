@@ -25,14 +25,13 @@ $router->add('/news/add', 'NewsController', 'addNews', [AuthMiddleware::class]);
 $router->add('/news/save', 'NewsController', 'saveNews', [AuthMiddleware::class]);
 
 // Rutas de notas
-$router->add('/notes', 'NoteController', 'showNotes');
-$router->add('/notes/(\d+)', 'NoteController', 'showById');
-$router->add('/notes/add', 'NoteController', 'addNote', [AuthMiddleware::class]);
-$router->add('/notes/save', 'NoteController', 'saveNote', [AuthMiddleware::class]);
+$router->add('/articles', 'ArticlesController', 'showArticles');
+$router->add('/articles/(\d+)', 'ArticlesController', 'showById');
+$router->add('/articles/add', 'ArticlesController', 'addArticle', [AuthMiddleware::class]);
+$router->add('/articles/save', 'ArticlesController', 'saveArticle', [AuthMiddleware::class]);
 
-// Ruta Admin
+// Rutas Admin
 $router->add('/admin', 'AdminController', 'index', [AuthMiddleware::class]);
 
-// Agregar más rutas según sea necesario
 
 return $router;
